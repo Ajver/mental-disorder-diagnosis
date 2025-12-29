@@ -1,31 +1,31 @@
-Patient Number,Sadness,Euphoric,Exhausted,Sleep dissorder,Mood Swing,Suicidal thoughts,Anorxia,Authority Respect,Try-Explanation,Aggressive Response,Ignore & Move-On,Nervous Break-down,Admit Mistakes,Overthinking,Sexual Activity,Concentration,Optimisim,Expert Diagnose
-Patiant-45,4,1,4,4,0,1,1,0,0,0,1,1,0,1,4,3,3,Depression
-Patiant-48,4,1,3,4,1,1,0,0,1,0,1,0,1,0,4,3,6,Bipolar Type-2
-Patiant-05,3,3,2,2,0,0,0,0,0,0,0,1,1,1,5,5,6,Normal
-Patiant-56,2,1,3,3,0,0,1,0,0,1,1,1,0,0,3,4,3,Normal
-Patiant-27,2,2,3,2,0,0,0,0,1,1,0,0,0,0,3,4,2,Normal
-Patiant-65,2,2,2,3,0,1,1,0,1,1,0,0,0,0,5,6,5,Normal
-Patiant-74,2,3,2,1,0,0,0,1,0,0,0,1,0,1,6,4,5,Normal
-Patiant-11,1,2,1,1,0,0,0,1,0,0,0,0,1,0,5,7,8,Normal
-Patiant-41,3,2,3,2,0,1,0,0,1,0,0,0,0,1,8,2,2,Depression
-Patiant-108,2,2,3,3,0,1,1,0,1,1,0,1,1,0,8,7,5,Depression
-Patiant-19,4,1,4,4,0,0,0,0,1,0,1,1,1,1,3,4,1,Depression
-Patiant-63,3,1,2,3,1,0,1,0,0,1,0,0,0,0,7,4,6,Bipolar Type-1
-Patiant-12,1,2,2,3,1,1,1,0,1,1,0,1,0,1,8,4,9,Bipolar Type-1
-Patiant-37,2,1,3,1,1,1,1,0,1,0,0,1,0,0,8,5,5,Bipolar Type-1
-Patiant-90,2,3,1,2,0,0,0,1,1,1,1,1,1,0,7,3,5,Normal
-Patiant-92,3,2,4,2,1,1,0,1,0,1,0,0,1,1,2,6,4,Bipolar Type-2
-Patiant-110,4,1,1,2,0,0,1,0,1,0,0,1,0,1,3,3,3,Depression
-Patiant-01,3,1,2,2,1,0,0,0,1,0,0,1,1,1,3,3,4,Bipolar Type-2
-Patiant-89,1,4,2,3,0,0,1,1,0,1,0,1,0,1,6,6,7,Bipolar Type-1
-Patiant-105,3,2,4,3,1,1,1,0,0,0,1,1,0,0,2,4,4,Bipolar Type-2
-Patiant-66,3,1,4,2,0,1,0,0,0,0,0,0,1,1,3,5,2,Depression
-Patiant-46,4,2,3,2,1,0,0,1,0,0,1,1,1,0,4,4,4,Bipolar Type-2
-Patiant-32,4,2,4,2,0,1,0,1,0,0,1,0,1,1,4,4,3,Depression
-Patiant-71,2,1,3,2,0,1,0,0,0,1,1,1,1,1,2,6,2,Depression
-Patiant-43,1,2,2,1,1,0,0,1,0,0,1,0,1,1,4,4,6,Normal
-Patiant-13,4,2,4,3,1,1,1,0,1,1,0,1,0,1,9,2,4,Bipolar Type-2
-Patiant-16,2,2,2,2,1,0,1,0,1,1,0,0,0,1,6,4,6,Bipolar Type-1
-Patiant-115,1,2,1,3,0,0,0,0,0,1,0,0,0,0,5,8,7,Normal
-Patiant-77,3,2,1,1,0,0,1,0,0,1,0,0,0,1,8,2,8,Depression
-Patiant-98,2,4,2,1,0,0,0,1,0,0,0,0,1,1,6,2,6,Normal
+Patient Number,Sadness,Euphoric,Mood Swing,Suicidal thoughts,Anorxia,Authority Respect,Try-Explanation,Aggressive Response,Ignore & Move-On,Nervous Break-down,Admit Mistakes,Overthinking,Concentration,Expert Diagnose
+Patiant-45,4,1,0,1,1,0,0,0,1,1,0,1,3,Depression
+Patiant-48,4,1,1,1,0,0,1,0,1,0,1,0,3,Bipolar Type-2
+Patiant-05,3,3,0,0,0,0,0,0,0,1,1,1,5,Normal
+Patiant-56,2,1,0,0,1,0,0,1,1,1,0,0,4,Normal
+Patiant-27,2,2,0,0,0,0,1,1,0,0,0,0,4,Normal
+Patiant-65,2,2,0,1,1,0,1,1,0,0,0,0,6,Normal
+Patiant-74,2,3,0,0,0,1,0,0,0,1,0,1,4,Normal
+Patiant-11,1,2,0,0,0,1,0,0,0,0,1,0,7,Normal
+Patiant-41,3,2,0,1,0,0,1,0,0,0,0,1,2,Depression
+Patiant-108,2,2,0,1,1,0,1,1,0,1,1,0,7,Depression
+Patiant-19,4,1,0,0,0,0,1,0,1,1,1,1,4,Depression
+Patiant-63,3,1,1,0,1,0,0,1,0,0,0,0,4,Bipolar Type-1
+Patiant-12,1,2,1,1,1,0,1,1,0,1,0,1,4,Bipolar Type-1
+Patiant-37,2,1,1,1,1,0,1,0,0,1,0,0,5,Bipolar Type-1
+Patiant-90,2,3,0,0,0,1,1,1,1,1,1,0,3,Normal
+Patiant-92,3,2,1,1,0,1,0,1,0,0,1,1,6,Bipolar Type-2
+Patiant-110,4,1,0,0,1,0,1,0,0,1,0,1,3,Depression
+Patiant-01,3,1,1,0,0,0,1,0,0,1,1,1,3,Bipolar Type-2
+Patiant-89,1,4,0,0,1,1,0,1,0,1,0,1,6,Bipolar Type-1
+Patiant-105,3,2,1,1,1,0,0,0,1,1,0,0,4,Bipolar Type-2
+Patiant-66,3,1,0,1,0,0,0,0,0,0,1,1,5,Depression
+Patiant-46,4,2,1,0,0,1,0,0,1,1,1,0,4,Bipolar Type-2
+Patiant-32,4,2,0,1,0,1,0,0,1,0,1,1,4,Depression
+Patiant-71,2,1,0,1,0,0,0,1,1,1,1,1,6,Depression
+Patiant-43,1,2,1,0,0,1,0,0,1,0,1,1,4,Normal
+Patiant-13,4,2,1,1,1,0,1,1,0,1,0,1,2,Bipolar Type-2
+Patiant-16,2,2,1,0,1,0,1,1,0,0,0,1,4,Bipolar Type-1
+Patiant-115,1,2,0,0,0,0,0,1,0,0,0,0,8,Normal
+Patiant-77,3,2,0,0,1,0,0,1,0,0,0,1,2,Depression
+Patiant-98,2,4,0,0,0,1,0,0,0,0,1,1,2,Normal
