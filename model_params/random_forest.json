@@ -1,6 +1,7 @@
 {
-    "scaler_name": "MinMaxScaler",
-    "n_features_to_select": 12,
-    "n_estimators": 576,
-    "min_samples_split": 5
+    "scaler_name": "StandardScaler",
+    "n_features_to_select": 10,
+    "n_estimators": 1420,
+    "min_samples_split": 2,
+    "max_depth": 470
 }
