@@ -86,13 +86,13 @@ def create_logistic_regression(params: dict, random_state: int = 42) -> Pipeline
 
 
 def save_model_params(model_name: str, params: dict):
-    with open(f"model_params/{model_name}.json", "w") as f:
+    with open(f"../model_params/{model_name}.json", "w") as f:
         params_str = json.dumps(params, indent=4)
         f.write(params_str)
 
 
 def load_model_params(model_name: str) -> dict:
-    with open(f"model_params/{model_name}.json", "r") as f:
+    with open(f"../model_params/{model_name}.json", "r") as f:
         params_str = f.read()
         params = json.loads(params_str)
         return params
