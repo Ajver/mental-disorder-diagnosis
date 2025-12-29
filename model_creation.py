@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 
-def create_random_forest(params: dict) -> Pipeline:
+def create_random_forest(params: dict, random_state: int = 42) -> Pipeline:
     n_features_to_select = params["n_features_to_select"]
     n_estimators = params["n_estimators"]
     min_samples_split = params["min_samples_split"]
@@ -16,7 +16,7 @@ def create_random_forest(params: dict) -> Pipeline:
         "MinMaxScaler": MinMaxScaler(),
     }[params["scaler_name"]]
 
-    model = RandomForestClassifier(n_estimators=n_estimators, min_samples_split=min_samples_split)
+    model = RandomForestClassifier(n_estimators=n_estimators, min_samples_split=min_samples_split, random_state=random_state)
     pipe = Pipeline([
         ("scaler", scaler),
         ("selector", RFE(model, n_features_to_select=n_features_to_select)),
