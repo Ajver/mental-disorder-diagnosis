@@ -1,23 +1,35 @@
+import pickle
+
 import numpy as np
+import pandas as pd
 from fastmlapi import MLController, preprocessing, postprocessing
 
+DATA_COLUMNS = pd.read_csv("../dataset/dataset.csv").columns.drop(["Patient Number", "Expert Diagnose"]).values.tolist()
+print("data columns:", DATA_COLUMNS, sep="\n")
 
-class MyClassifier(MLController):
-    model_name = "my-classifier"
+
+class MentalDisordersClassifier(MLController):
+    model_name = "mental-disorders-classifier"
     model_version = "1.0.0"
 
     def load_model(self):
-        # TODO
-        return None
+        with open("../models/logistic_regression.pkl", "rb") as f:
+            model = pickle.load(f)
+            return model
 
     @preprocessing
-    def preprocess(self, data: dict) -> np.ndarray:
-        return np.array(data["features"]).reshape(1, -1)
+    def preprocess(self, data: dict) -> pd.DataFrame:
+        # Wrapping with DataFrame to filter only expected columns and ensure correct order
+        df = pd.DataFrame(columns=DATA_COLUMNS, data=[data])
+        return df
 
     @postprocessing
     def postprocess(self, prediction: np.ndarray) -> dict:
-        return {"class": int(prediction[0])}
+        response = {
+            "diagnose": prediction[0]
+        }
+        return response
 
 
 if __name__ == "__main__":
-    MyClassifier().run()
+    MentalDisordersClassifier().run()
