@@ -2,6 +2,8 @@ import json
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import RFE, SelectKBest
+from sklearn.linear_model import LogisticRegression
+from sklearn.multiclass import OneVsRestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -53,6 +55,31 @@ def create_knn(params: dict) -> Pipeline:
         ("scaler", scaler),
         ("selector", SelectKBest(k=n_features_to_select)),
         ("classifier", model),
+    ])
+    return pipe
+
+
+def create_logistic_regression(params: dict, random_state: int = 42) -> Pipeline:
+    n_features_to_select = params["n_features_to_select"]
+    C = params["C"]
+    solver = params["solver"]
+    max_iter = params["max_iter"]
+
+    scaler = {
+        "StandardScaler": StandardScaler(),
+        "MinMaxScaler": MinMaxScaler(),
+    }[params["scaler_name"]]
+
+    ovr_model = OneVsRestClassifier(LogisticRegression(
+        C=C, solver=solver,
+        max_iter=max_iter,
+        random_state=random_state)
+    )
+
+    pipe = Pipeline([
+        ("scaler", scaler),
+        ("selector", RFE(LogisticRegression(C=C, max_iter=max_iter, random_state=random_state), n_features_to_select=n_features_to_select)),
+        ("classifier", ovr_model),
     ])
     return pipe
 
