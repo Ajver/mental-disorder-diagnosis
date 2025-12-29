@@ -1,0 +1,7 @@
+{
+    "scaler_name": "MinMaxScaler",
+    "n_features_to_select": 11,
+    "n_neighbors": 17,
+    "weights": "distance",
+    "metric": "manhattan"
+}

@@ -1,7 +1,8 @@
 import json
 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import RFE
+from sklearn.feature_selection import RFE, SelectKBest
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
@@ -26,6 +27,31 @@ def create_random_forest(params: dict, random_state: int = 42) -> Pipeline:
     pipe = Pipeline([
         ("scaler", scaler),
         ("selector", RFE(model, n_features_to_select=n_features_to_select)),
+        ("classifier", model),
+    ])
+    return pipe
+
+
+def create_knn(params: dict) -> Pipeline:
+    n_features_to_select = params["n_features_to_select"]
+    n_neighbors = params["n_neighbors"]
+    weights = params["weights"]
+    metric = params["metric"]
+
+    scaler = {
+        "StandardScaler": StandardScaler(),
+        "MinMaxScaler": MinMaxScaler(),
+    }[params["scaler_name"]]
+
+    model = KNeighborsClassifier(
+        n_neighbors=n_neighbors,
+        weights=weights,
+        metric=metric,
+    )
+
+    pipe = Pipeline([
+        ("scaler", scaler),
+        ("selector", SelectKBest(k=n_features_to_select)),
         ("classifier", model),
     ])
     return pipe
