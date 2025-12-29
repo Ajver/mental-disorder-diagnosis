@@ -71,7 +71,8 @@ def create_logistic_regression(params: dict, random_state: int = 42) -> Pipeline
     }[params["scaler_name"]]
 
     ovr_model = OneVsRestClassifier(LogisticRegression(
-        C=C, solver=solver,
+        C=C,
+        solver=solver,
         max_iter=max_iter,
         random_state=random_state)
     )
