@@ -17,7 +17,6 @@ uv sync
 ## Evaluate model using UI + model server
 
 ```sh
-# Run backend
 uv --directory model_server/ run model_server.py
 ```
 
