@@ -14,6 +14,12 @@ There are 4 unique classes in the dataset:
 uv sync
 ```
 
+## Training model
+```sh
+uv run -m src.final_model_create
+```
+
+
 ## Evaluate model using UI + model server
 
 ```sh

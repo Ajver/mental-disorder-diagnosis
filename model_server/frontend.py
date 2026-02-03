@@ -145,7 +145,7 @@ if st.button("Diagnose me"):
 
     try:
         response = requests.post(
-            "http://0.0.0.0:8000/predict",
+            "http://127.0.0.1:8000/predict",
             json=payload,
             timeout=10
         )

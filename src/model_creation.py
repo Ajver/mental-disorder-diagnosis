@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import RFE, SelectKBest
@@ -86,13 +87,12 @@ def create_logistic_regression(params: dict, random_state: int = 42) -> Pipeline
 
 
 def save_model_params(model_name: str, params: dict):
-    with open(f"../model_params/{model_name}.json", "w") as f:
-        params_str = json.dumps(params, indent=4)
-        f.write(params_str)
+    path = Path(__file__).resolve().parent.parent / "model_params" / f"{model_name}.json"
+    with open(path, "w") as f:
+        json.dump(params, f, indent=4)
 
 
 def load_model_params(model_name: str) -> dict:
-    with open(f"../model_params/{model_name}.json", "r") as f:
-        params_str = f.read()
-        params = json.loads(params_str)
-        return params
+    path = Path(__file__).resolve().parent.parent / "model_params" / f"{model_name}.json"
+    with open(path, "r") as f:
+        return json.load(f)
